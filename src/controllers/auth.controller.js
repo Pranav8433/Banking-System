@@ -42,6 +42,7 @@ export async function registerController(req, res) {
     });
 
     await sendRegistrationEmail(newUser.email,newUser.name)
+    
   } catch (error) {
     // Duplicate email error
     if (error.code === 11000) {

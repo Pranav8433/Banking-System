@@ -20,6 +20,7 @@ transporter.verify((error, success) => {
   }
 });
 
+
 /**
  * @desc Function to send email
  */
@@ -40,13 +41,6 @@ const sendEmail = async (to, subject, text, html) => {
   }
 };
 
-// export async function sendRegistrationEmail(userEmail,name) {
-//   const subject = 'Welcome to Banking System!';
-//   const text = `Hi ${name},\n\nThank you for registering with our banking system. We're excited to have you on board!\n\nBest regards,\nBanking System Team`;
-//   const html = `<p>Hi ${name},</p><p>Thank you for registering with our banking system. We're excited to have you on board!</p><p>Best regards,<br/>Banking System Team</p>`;
-
-//   await sendEmail(userEmail, subject, text, html);
-// }
 
 export async function sendRegistrationEmail(userEmail, name) {
   const subject = "Welcome to Banking System – Your Account is Ready";
