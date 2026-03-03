@@ -6,7 +6,7 @@ import userModel from "../models/user.model.js";
  * @route Protected routes
  * @function authMiddleware
  */
-export async function authMiddleware(req, res, next) {
+async function authMiddleware(req, res, next) {
   const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
 
   if (!token) {
@@ -31,3 +31,4 @@ export async function authMiddleware(req, res, next) {
     });
   }
 }
+export default authMiddleware
